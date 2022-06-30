@@ -89,10 +89,6 @@ function Da(e) {
   return La[e]
 }
 
-function Ga(e) {
-  return Na(Ha, e)
-}
-
 function Na(e, a) {
   var r = new Date(e),
     o = new Date(a).setHours(0, 0, 0, 0) - r.setHours(0, 0, 0, 0);
@@ -100,7 +96,8 @@ function Na(e, a) {
 }
 
 function updateWord() {
-  const e = Da(today);
+  const s = Na(Ha, today)
+  const e = Da(s)
   for (let a = 0; a < 5; a++) {
     const r = a + 1;
     console.log(`letter-${r}`), console.log(e[a]), document.getElementById(`letter-${r}`).innerHTML = e[a]
